@@ -150,6 +150,7 @@ class WalletService {
     // Generic ERC20 for any token
     const tokenAddress = CONTRACT_ADDRESSES[tokenName];
     if (!tokenAddress) throw new Error('Invalid token address');
+    if (!this.provider) throw new Error('Provider not initialized');
 
     const genericContract = new ethers.Contract(
       tokenAddress,
