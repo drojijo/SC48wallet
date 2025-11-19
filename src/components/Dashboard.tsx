@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import WalletService from '../services/walletService';
 import { TokenSymbol } from '../config/contracts';
 
